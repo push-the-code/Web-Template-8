@@ -8,35 +8,160 @@
         <title>Portfolio</title>
         <style type="text/css" media="all">
             * {
-                margin: 0 !important;
-                padding: 0 !important;
+                margin: 0;
+                padding: 0;
                 text-decoration: none;
+                font-family: "Raleway", Sans-Serif;
             }
             a {
                 color: #000000;
+            }
+            img {
+                width: 100%;
+            }
+            h1, h2, h3, h4 {
+                font-weight: 500;
+            }
+            .main > .sidebar {
+                float: left;
+                width: 25%;
+                background: #f1f1f1;
+            }
+            .main > .container {
+                float: right;
+                width: 75%;
+                padding: 16px;
+                background: #f1f1f1;
+            }
+            .main > .container > .header {
+                padding: 16px 0;
+                margin: 0;
+                color: #000000;
+                background: #f1f1f1;
+            }
+            .main > .container > .header > .header-btns {
+                margin: 64px 0 0 !important;
+            }
+            .main > .container > .header > .header-btns > p {
+                padding-bottom: 16px;
+                border-bottom: 5px solid darkgrey;
+            }
+            .main > .container > .header > .header-btns > p > a {
+                display: inline-block;
+                background: #ffffff;
+                padding: 12px 16px;
+                word-spacing: 12px;
+            }
+            .main > .container > .header > .header-btns > p > a:hover {
+                background: darkgrey;
+            }
+            
+            
+            .main > .container > .photos {
+                margin: 0;
+                display: grid;
+                grid-gap: 16px 14px;
+                grid-template-columns: repeat(3, 3fr);
+                grid-template-rows: repeat(1, 1fr);
+            }
+            .main > .container > .photos > .photos-card {
+                background: #ffffff;
+            }
+            .main > .container > .photos > .photos-card > img:hover {
+                filter: brightness(85%) contrast(85%);
+                opacity: 0.85;
+            }
+            .main > .container > .photos > .photos-card > section {
+                padding: 16px;
+            }
+            .main > .container > .photos > .photos-card > section > p {
+                margin: 8px 0;
             }
         </style>
     </head>
     <body>
         <div class="main">
-            <aside class="left">
+            
+            <aside class="sidebar">
                 
             </aside>
+            
             <div class="container">
                 <header class="header">
                     <h1>My Portfolio</h1>
                     <section class="header-btns">
                         <p>
                             Filter:
-                            <a href="#all">ALL</a>
+                            <a href="#all" style="background: #000000; color: #ffffff;">ALL</a>
                             <a href="#design"><i class="fa-regular fa-gem"></i> Design</a>
                             <a href="#photos"><i class="fa-regular fa-image"></i> Photos</a>
                             <a href="#art"><i class="fa-solid fa-map-pin"></i> Art</a>
-                            
                         </p>
-                        
                     </section>
                 </header>
+                
+                <section class="photos">
+                    <article class="photos-card">
+                        <img src="https://www.w3schools.com/w3images/mountains.jpg" alt="mountains" />
+                        <section>
+                            <h3>Lorem Ipsum</h3>
+                            <p>
+                                Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum,
+                                porta lectus vitae, ultricies congue gravida diam non fringilla.
+                            </p>
+                        </section>
+                    </article>
+                    <article class="photos-card">
+                        <img src="https://www.w3schools.com/w3images/lights.jpg" alt="lights" />
+                        <section>
+                            <h3>Lorem Ipsum</h3>
+                            <p>
+                                Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum,
+                                porta lectus vitae, ultricies congue gravida diam non fringilla.
+                            </p>
+                        </section>
+                    </article>
+                    <article class="photos-card">
+                        <img src="https://www.w3schools.com/w3images/nature.jpg" alt="nature" />
+                        <section>
+                            <h3>Lorem Ipsum</h3>
+                            <p>
+                                Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum,
+                                porta lectus vitae, ultricies congue gravida diam non fringilla.
+                            </p>
+                        </section>
+                    </article>
+                    <article class="photos-card">
+                        <img src="https://www.w3schools.com/w3images/p1.jpg" alt="fog" />
+                        <section>
+                            <h3>Lorem Ipsum</h3>
+                            <p>
+                                Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum,
+                                porta lectus vitae, ultricies congue gravida diam non fringilla.
+                            </p>
+                        </section>
+                    </article>
+                    <article class="photos-card">
+                        <img src="https://www.w3schools.com/w3images/p2.jpg" alt="coffee" />
+                        <section>
+                            <h3>Lorem Ipsum</h3>
+                            <p>
+                                Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum,
+                                porta lectus vitae, ultricies congue gravida diam non fringilla.
+                            </p>
+                        </section>
+                    </article>
+                    <article class="photos-card">
+                        <img src="https://www.w3schools.com/w3images/p3.jpg" alt="bear" />
+                        <section>
+                            <h3>Lorem Ipsum</h3>
+                            <p>
+                                Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum,
+                                porta lectus vitae, ultricies congue gravida diam non fringilla.
+                            </p>
+                        </section>
+                    </article>
+                </section>
             </div>
         </div>
     </body>
