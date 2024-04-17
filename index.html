@@ -22,6 +22,12 @@
             h1, h2, h3, h4 {
                 font-weight: 500;
             }
+            progress::-webkit-progress-bar {
+                background: lightgrey;
+            }
+            progress::-webkit-progress-value {
+                background: grey;
+            }
             .main > .sidebar {
                 float: left;
                 width: 25%;
@@ -97,10 +103,30 @@
                 background: darkgrey;
             }
             
-            .main > .container > .about-img {
+            .main > .container > .about > .about-img {
                 display: grid;
                 grid-gap: 12px;
                 grid-template-columns: repeat(2, 2fr);
+            }
+            .main > .container > .about > .about-desc {
+                width: 100%;
+            }
+            .main > .container > .about > .about-desc > .progress {
+                width: 100%;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            .main > .container > .about > .about-desc > .progress > label {
+                width: fit-content;
+                display: inline-block;
+                text-align: start;
+            }
+            .main > .container > .about > .about-desc > .progress > progress {
+                width: 100%;
+                display: inline-block;
+                height: 35px;
+                margin: 12px 0;
+                border-radius: 0;
             }
         </style>
     </head>
@@ -199,9 +225,34 @@
                     </p>
                 </section>
                 
-                <section class="about-img">
-                    <img src="https://www.w3schools.com/w3images/avatar_g.jpg" alt="avatar_g" />
-                    <img src="https://www.w3schools.com/w3images/me2.jpg" alt="me2" />
+                <section class="about">
+                    <section class="about-img">
+                        <img src="https://www.w3schools.com/w3images/avatar_g.jpg" alt="avatar_g" />
+                        <img src="https://www.w3schools.com/w3images/me2.jpg" alt="me2" />
+                    </section>
+                    <article class="about-desc">
+                        <h3>About Me</h3>
+                        <p>
+                            Just me, myself and I, exploring the universe of unknownment.
+                            I have a heart of love and an interest of lorem ipsum and mauris neque quam blog.
+                            I want to share my world with you. Praesent tincidunt sed tellus ut rutrum.
+                            Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.
+                            Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae,
+                            ultricies congue gravida diam non fringilla.
+                        </p>
+                        <h3>Technical Skills</h3>
+                        <section class="progress">
+                            <label for="photography">Photography</label>
+                            <progress name="photography" id="photography" max="100" value="95">95%</progress>
+                            
+                            <label for="webdesign">Web Design</label>
+                            <progress name="webdesign" id="webdesign" max="100" value="85">95%</progress>
+                            
+                            <label for="photoshop">Photoshop</label>
+                            <progress name="photoshop" id="photoshop" max="100" value="80">95%</progress>
+                        </section>
+                    </article>
+                    
                 </section>
             </div>
         </div>
