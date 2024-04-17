@@ -44,6 +44,7 @@
             }
             .main > .container > .header > .header-btns > p {
                 padding-bottom: 16px;
+                font-size: 14px;
                 border-bottom: 5px solid darkgrey;
             }
             .main > .container > .header > .header-btns > p > a {
@@ -82,16 +83,24 @@
                 width: 100%;
                 padding: 48px 0;
                 text-align: center;
-                border: 1px solid;
             }
             .main > .container > .page-navigation > p {
-                border: 1px solid;
                 display: inline-block;
+                font-size: 12px;
             }
             .main > .container > .page-navigation > p > a {
                 float: left;
                 padding: 6px 9px;
                 margin: 0 !important;
+            }
+            .main > .container > .page-navigation > p > a:hover {
+                background: darkgrey;
+            }
+            
+            .main > .container > .about-img {
+                display: grid;
+                grid-gap: 12px;
+                grid-template-columns: repeat(2, 2fr);
             }
         </style>
     </head>
@@ -188,6 +197,11 @@
                         <a href="#four">4</a>
                         <a href="#forward"><i class="fa-solid fa-forward"></i></a>
                     </p>
+                </section>
+                
+                <section class="about-img">
+                    <img src="https://www.w3schools.com/w3images/avatar_g.jpg" alt="avatar_g" />
+                    <img src="https://www.w3schools.com/w3images/me2.jpg" alt="me2" />
                 </section>
             </div>
         </div>
