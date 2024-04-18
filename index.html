@@ -137,6 +137,21 @@
                 margin: 12px 0;
                 border-radius: 0;
             }
+            .main > .container > .about > .about-desc > .progress > progress:first-child()::before {
+                width: fit-content;
+                display: block;
+                content: "95%";
+                color: #ffffff;
+                position: absolute;
+                margin: 8.5px 35%;
+            }
+            .main > .container > .about > .about-desc > .progress > button {
+                margin: 8px 0 0;
+                padding: 8px 16px;
+                border: none;
+                background: grey;
+                color: #ffffff;
+            }
         </style>
     </head>
     <body>
@@ -260,6 +275,8 @@
                             
                             <label for="photoshop">Photoshop</label>
                             <progress name="photoshop" id="photoshop" max="100" value="80">95%</progress>
+                            
+                            <button type="button"><i class="fa-solid fa-download"></i> Download Resume</button>
                         </section>
                     </article>
                     
