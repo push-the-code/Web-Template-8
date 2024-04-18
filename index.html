@@ -23,10 +23,10 @@
                 font-weight: 500;
             }
             progress::-webkit-progress-bar {
-                background: lightgrey;
+                background: #a9a9a9;
             }
             progress::-webkit-progress-value {
-                background: grey;
+                background: #555555;
             }
             .main > .sidebar {
                 float: left;
@@ -121,7 +121,7 @@
                 margin: 48px 0 0;
                 padding: 0 !important;
             }
-            .main > .container > .about > .about-desc > .progress > h3 {
+            .main > .container > .about > .about-desc > .progress > h4 {
                 margin: 24px 0;
             }
             .main > .container > .about > .about-desc > .progress > label {
@@ -137,10 +137,26 @@
                 margin: 12px 0;
                 border-radius: 0;
             }
-            .main > .container > .about > .about-desc > .progress > progress:first-child()::before {
+            .main > .container > .about > .about-desc > .progress > #progress-first::before {
                 width: fit-content;
                 display: block;
                 content: "95%";
+                color: #ffffff;
+                position: absolute;
+                margin: 8.5px 35%;
+            }
+            .main > .container > .about > .about-desc > .progress > #progress-second::before {
+                width: fit-content;
+                display: block;
+                content: "85%";
+                color: #ffffff;
+                position: absolute;
+                margin: 8.5px 35%;
+            }
+            .main > .container > .about > .about-desc > .progress > #progress-third::before {
+                width: fit-content;
+                display: block;
+                content: "80%";
                 color: #ffffff;
                 position: absolute;
                 margin: 8.5px 35%;
@@ -149,8 +165,13 @@
                 margin: 8px 0 0;
                 padding: 8px 16px;
                 border: none;
-                background: grey;
+                background: #555555;
                 color: #ffffff;
+            }
+            .main > .container > .about > .about-desc > .progress > button:hover {
+                background: #a9a9a9;
+                color: #000000;
+                cursor: pointer;
             }
         </style>
     </head>
@@ -265,21 +286,39 @@
                             ultricies congue gravida diam non fringilla.
                         </p>
                         <section class="progress">
-                            <h3>Technical Skills</h3>
+                            <h4>Technical Skills</h4>
                             
                             <label for="photography">Photography</label>
-                            <progress name="photography" id="photography" max="100" value="95">95%</progress>
+                            <progress name="photography" id="progress-first" max="100" value="95">95%</progress>
                             
                             <label for="webdesign">Web Design</label>
-                            <progress name="webdesign" id="webdesign" max="100" value="85">95%</progress>
+                            <progress name="webdesign" id="progress-second" max="100" value="85">95%</progress>
                             
                             <label for="photoshop">Photoshop</label>
-                            <progress name="photoshop" id="photoshop" max="100" value="80">95%</progress>
+                            <progress name="photoshop" id="progress-third" max="100" value="80">95%</progress>
                             
                             <button type="button"><i class="fa-solid fa-download"></i> Download Resume</button>
                         </section>
                     </article>
+                </section>
+                
+                <section class="pricing">
+                    <h4>How much I charge</h4>
                     
+                    <article class="price-card">
+                        <h2>Basic</h2>
+                        <p>100GB Storage</p>
+                        <p>100 Emails</p>
+                        <p>10 Domains</p>
+                        <p><b>Endless</b> Support</p>
+                        <article class="price">
+                            <h2>&dollar; 10</h2>
+                            <small style="color: #808080;">per month</small>
+                        </article>
+                        <article class="sign-btn">
+                            <button type="button">Sign Up</button>
+                        </article>
+                    </article>
                 </section>
             </div>
         </div>
