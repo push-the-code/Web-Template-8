@@ -252,8 +252,8 @@
             
             .main > .container > .contact {
                 background: #9a9a9a;
-                padding: 16px 32px;
-                margin: 48px 0;
+                padding: 16px 16px;
+                margin: 48px -16px;
             }
             .main > .container > .contact > .contact-detail {
                 display: flex;
@@ -275,6 +275,33 @@
                 display: block;
                 text-align: center;
                 margin: 16px 0;
+            }
+            
+            .main > .container > .contact > .user-details {
+                border-top: 2px solid #f1f1f1;
+            }
+            .main > .container > .contact > .user-details > label, input {
+                display: block;
+                width: 100%;
+                margin: 0 0 1px 0;
+            }
+            .main > .container > .contact > .user-details > label {
+                margin: 18px 0 0;
+            }
+            .main > .container > .contact > .user-details > input {
+                padding: 8px;
+            }
+            .main > .container > .contact > .user-details > button {
+                background: #000000;
+                color: #f1f1f1;
+                padding: 8px 16px;
+                margin: 18px 0 8px 0;
+                border: none;
+            }
+            .main > .container > .contact > .user-details > button:hover {
+                background: #f1f1f1;
+                color: #000000;
+                cursor: pointer;
             }
         </style>
     </head>
@@ -474,6 +501,19 @@
                             <span>512312311</span>
                         </p>
                     </article>
+                    
+                    <form class="user-details" method="get" accept-charset="utf-8">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" />
+                        
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" />
+                        
+                        <label for="messaga">Messaga</label>
+                        <input type="text" name="messaga" id="messaga" />
+                        
+                        <button type="button"><i class="fa-solid fa-paper-plane"></i> Send Messaga</button>
+                    </form>
                 </section>
             </div>
         </div>
