@@ -40,15 +40,19 @@
                 background: #f1f1f1;
             }
             .main > .container > .header {
-                padding: 16px 0;
+                padding: 16px 0 !important;
                 margin: 0;
                 color: #000000;
                 background: #f1f1f1;
             }
             .main > .container > .header > .header-btns {
-                margin: 64px 0 0 !important;
+                width: 100%;
+                margin: 32px 0 !important;
             }
             .main > .container > .header > .header-btns > p {
+                background: none !important;
+                color: #000000;
+                margin: 0 !important;
                 padding-bottom: 16px;
                 font-size: 14px;
                 border-bottom: 5px solid darkgrey;
@@ -57,6 +61,7 @@
                 display: inline-block;
                 background: #ffffff;
                 padding: 12px 16px;
+                margin: 0 !important;
                 word-spacing: 12px;
             }
             .main > .container > .header > .header-btns > p > a:hover {
@@ -83,6 +88,8 @@
             }
             .main > .container > .photos > .photos-card > section > p {
                 margin: 8px 0;
+                background: none;
+                color: #000000;
             }
             
             .main > .container > .page-navigation {
@@ -91,6 +98,7 @@
                 text-align: center;
             }
             .main > .container > .page-navigation > p {
+                background: none;
                 display: inline-block;
                 font-size: 12px;
             }
@@ -244,15 +252,24 @@
             
             .main > .container > .contact {
                 background: #9a9a9a;
+                padding: 16px 32px;
+                margin: 48px 0;
             }
             .main > .container > .contact > .contact-detail {
                 display: flex;
                 flex-direction: row;
+                padding: 24px 0;
             }
             .main > .container > .contact > .contact-detail > p {
-                border: 1px solid;
                 width: 100%;
-                padding: 8px 0;
+            }
+            .main > .container > .contact > .contact-detail > p:first-child, p:last-child {
+                background: #555555;
+                color: #ffffff;
+            }
+            .main > .container > .contact > .contact-detail > p:nth-child(2) {
+                background: rgba(0, 150, 136, 1);;
+                color: #ffffff;
             }
             .main > .container > .contact > .contact-detail > p > i, span {
                 display: block;
