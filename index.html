@@ -169,9 +169,95 @@
                 color: #ffffff;
             }
             .main > .container > .about > .about-desc > .progress > button:hover {
-                background: #a9a9a9;
+                background: #9a9a9a;
                 color: #000000;
                 cursor: pointer;
+            }
+            .main > .container > .pricing {
+                padding: 64px 0 0;
+            }
+            .main > .container > .pricing > h4 {
+                margin: 16px 0;
+                font-size: 20px;
+            }
+            .main > .container > .pricing > .prices {
+                display: grid;
+                grid-gap: 16px 14px;
+                grid-template-columns: repeat(3, 3fr);
+                grid-template-rows: repeat(1, 1fr);
+            }
+            .main > .container > .pricing > .prices > .price-card {
+                border: 1px solid darkgrey;
+            }
+            .main > .container > .pricing > .prices > .price-card > *  {
+                text-align: center;
+                border-bottom: 1px solid darkgrey;
+            }
+            .main > .container > .pricing > .prices > .price-card > h2 {
+                padding: 32px 16px;
+            }
+            .main > .container > .pricing > .prices > .price-card > p {
+                padding: 16px;
+                margin: 0;
+            }
+            .main > .container > .pricing > .prices > .price-card > .price {
+                padding: 16px;
+            }
+            .main > .container > .pricing > .prices > .price-card > .price > h2, small {
+                margin: 10px 0;
+            }
+            .main > .container > .pricing > .prices > .price-card > .sign-btn {
+                background: #e1e1e1;
+                padding: 16px;
+            }
+            .main > .container > .pricing > .prices > .price-card > .sign-btn > button {
+                background: rgba(0, 150, 136, 0.6);
+                color: #ffffff;
+                padding: 12px 24px;
+                border: none !important;
+            }
+            .main > .container > .pricing > .prices > .price-card > .sign-btn > button:hover {
+                background: rgba(0, 150, 136, 1);
+                cursor: pointer;
+            }
+            .main > .container > .pricing > .prices > .price-card:first-child > h2 {
+                background: #555555;
+                color: #ffffff;
+            }
+            .main > .container > .pricing > .prices > .price-card:first-child:hover > h2 {
+                background: #000000;
+            }
+            .main > .container > .pricing > .prices > .price-card:nth-child(2) > h2 {
+                background: rgba(0, 150, 136, 0.6);
+                color: #ffffff;
+            }
+            .main > .container > .pricing > .prices > .price-card:nth-child(2):hover > h2 {
+                background: rgba(0, 150, 136, 1);
+            }
+            .main > .container > .pricing > .prices > .price-card:last-child > h2 {
+                background: #555555;
+                color: #ffffff;
+            }
+            .main > .container > .pricing > .prices > .price-card:last-child:hover > h2 {
+                background: #000000;
+            }
+            
+            .main > .container > .contact {
+                background: #9a9a9a;
+            }
+            .main > .container > .contact > .contact-detail {
+                display: flex;
+                flex-direction: row;
+            }
+            .main > .container > .contact > .contact-detail > p {
+                border: 1px solid;
+                width: 100%;
+                padding: 8px 0;
+            }
+            .main > .container > .contact > .contact-detail > p > i, span {
+                display: block;
+                text-align: center;
+                margin: 16px 0;
             }
         </style>
     </head>
@@ -305,19 +391,71 @@
                 <section class="pricing">
                     <h4>How much I charge</h4>
                     
-                    <article class="price-card">
-                        <h2>Basic</h2>
-                        <p>100GB Storage</p>
-                        <p>100 Emails</p>
-                        <p>10 Domains</p>
-                        <p><b>Endless</b> Support</p>
-                        <article class="price">
-                            <h2>&dollar; 10</h2>
-                            <small style="color: #808080;">per month</small>
+                    <section class="prices">
+                        <article class="price-card">
+                            <h2 id="basic">Basic</h2>
+                            <p>Web Design</p>
+                            <p>Photography</p>
+                            <p>1GB Storage</p>
+                            <p>Mail Support</p>
+                            <article class="price">
+                                <h2>&dollar; 10</h2>
+                                <small style="color: #808080;">per month</small>
+                            </article>
+                            <article class="sign-btn">
+                                <button type="button">Sign Up</button>
+                            </article>
                         </article>
-                        <article class="sign-btn">
-                            <button type="button">Sign Up</button>
+                        
+                        <article class="price-card">
+                            <h2 id="pro">Pro</h2>
+                            <p>Web Design</p>
+                            <p>Photography</p>
+                            <p>50GB Storage</p>
+                            <p>Mail Support</p>
+                            <article class="price">
+                                <h2>&dollar; 15</h2>
+                                <small style="color: #808080;">per month</small>
+                            </article>
+                            <article class="sign-btn">
+                                <button type="button">Sign Up</button>
+                            </article>
                         </article>
+                        
+                        <article class="price-card">
+                            <h2 id="premium">Premium</h2>
+                            <p>Web Design</p>
+                            <p>Photography</p>
+                            <p>Unlimited</p>
+                            <p>Mail Support</p>
+                            <article class="price">
+                                <h2>&dollar; 25</h2>
+                                <small style="color: #808080;">per month</small>
+                            </article>
+                            <article class="sign-btn">
+                                <button type="button">Sign Up</button>
+                            </article>
+                        </article>
+                    </section>
+                </section>
+                
+                <section class="contact">
+                    <h3>Contact Me</h3>
+                    <article class="contact-detail">
+                        <p>
+                            <i class="fa-solid fa-envelope" style="font-size: 36px;"></i>
+                            <span>email@email.com</span>
+                        </p>
+                        
+                        <p>
+                            <i class="fa-solid fa-location-dot" style="font-size: 36px;"></i>
+                            <span>Chicago, US</span>
+                        </p>
+                        
+                        <p>
+                            <i class="fa-solid fa-phone" style="font-size: 36px;"></i>
+                            <span>512312311</span>
+                        </p>
                     </article>
                 </section>
             </div>
