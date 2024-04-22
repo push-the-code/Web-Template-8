@@ -252,8 +252,8 @@
             
             .main > .container > .contact {
                 background: #9a9a9a;
-                padding: 16px 16px;
-                margin: 48px -16px;
+                padding: 16px;
+                margin: 48px -16px 0 -16px;
             }
             .main > .container > .contact > .contact-detail {
                 display: flex;
@@ -278,18 +278,22 @@
             }
             
             .main > .container > .contact > .user-details {
+                margin: 0 !important;
+                padding: 0 !important;
+                width: 100%;
                 border-top: 2px solid #f1f1f1;
             }
-            .main > .container > .contact > .user-details > label, input {
+            .main > .container > .contact > .user-details > label {
                 display: block;
-                width: 100%;
                 margin: 0 0 1px 0;
             }
             .main > .container > .contact > .user-details > label {
                 margin: 18px 0 0;
             }
             .main > .container > .contact > .user-details > input {
-                padding: 8px;
+                width: 100%;
+                padding: 8px 0;
+                display: inline-block;
             }
             .main > .container > .contact > .user-details > button {
                 background: #000000;
@@ -302,6 +306,21 @@
                 background: #f1f1f1;
                 color: #000000;
                 cursor: pointer;
+            }
+            .main > .container > .footer {
+                background: #555555;
+                margin: 0 -16px;
+                padding: 16px;
+            }
+            .main > .container > .footer > .footer-info {
+                width: 32%;
+                color: #ffffff;
+            }
+            .main > .container > .footer > .blog-posts {
+                width: 32%;
+            }
+            .main > .container > .footer > .popular-tags {
+                width: 32%;
             }
         </style>
     </head>
@@ -509,15 +528,30 @@
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email" />
                         
-                        <label for="messaga">Messaga</label>
-                        <input type="text" name="messaga" id="messaga" />
+                        <label for="message">Message</label>
+                        <input type="text" name="message" id="message" />
                         
-                        <button type="button"><i class="fa-solid fa-paper-plane"></i> Send Messaga</button>
+                        <button type="button"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
                     </form>
                 </section>
                 
                 <footer class="footer">
+                    <section class="footer-info">
+                        <h3>FOOTER</h3> 
+                        <p>
+                            Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum,
+                            porta lectus vitae, ultricies congue gravida diam non fringilla.
+                        </p>
+                        <p>Powered by <span>Pushkar</span></p>
+                    </section>
                     
+                    <section class="blog-posts">
+                        
+                    </section>
+                    
+                    <section class="popular-tags">
+                        
+                    </section>
                 </footer>
             </div>
         </div>
