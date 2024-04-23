@@ -310,17 +310,50 @@
             .main > .container > .footer {
                 background: #555555;
                 margin: 0 -16px;
-                padding: 16px;
+                padding: 48px 16px;
+                display: grid;
+                grid-gap: 12px;
+                grid-template-columns: repeat(3, 3fr);
             }
             .main > .container > .footer > .footer-info {
-                width: 32%;
                 color: #ffffff;
             }
-            .main > .container > .footer > .blog-posts {
-                width: 32%;
+            .main > .container > .footer > .footer-info > P {
+                text-align: justify;
             }
-            .main > .container > .footer > .popular-tags {
+            .main > .container > .footer > .footer-info > p > span {
+                display: inline;
+                font-size: small;
+                text-decoration: underline;
+            }
+            
+            .main > .container > .footer > .blog-posts {
+                color: #ffffff;
+            }
+            .main > .container > .footer > .blog-posts > .blog-card {
                 width: 32%;
+                display: block;
+            }
+            .main > .container > .footer > .blog-posts > .blog-card > img {
+                float: left;
+                display: inline-block;
+                margin: 0;
+            }
+            .main > .container > .footer > .blog-posts > .blog-card > p > span {
+                display: inline;
+                margin: 0 !important;
+            }
+            
+            .main > .container > .footer > .popular-tags {
+                color: #ffffff;
+            }
+            .main > .container > .footer > .popular-tags > .tags {
+                display: inline;
+            }
+            .main > .container > .footer > .popular-tags > .tags > span {
+                margin: 0 8px 0 0;
+                padding: 0;
+                display: inline;
             }
         </style>
     </head>
@@ -537,7 +570,7 @@
                 
                 <footer class="footer">
                     <section class="footer-info">
-                        <h3>FOOTER</h3> 
+                        <h3>FOOTER</h3>
                         <p>
                             Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum,
                             porta lectus vitae, ultricies congue gravida diam non fringilla.
@@ -546,11 +579,39 @@
                     </section>
                     
                     <section class="blog-posts">
-                        
+                        <h3>BLOG POSTS</h3>
+                        <article class="blog-card">
+                            <img src="https://www.w3schools.com/w3images/workshop.jpg" alt="workshop" />
+                            <p>
+                                <span>Lorem</span>
+                                <span>Sed mattis nunc</span>
+                            </p>
+                        </article>
+                        <article class="blog-card">
+                            <img src="https://www.w3schools.com/w3images/gondol.jpg" alt="gondol" />
+                            <p>Ipsum<br>Praes tinci sed</p>
+                        </article>
                     </section>
                     
                     <section class="popular-tags">
+                        <h3>POPULAR TAGS</h3>
                         
+                        <section class="tags">
+                            <span>Travel</span>
+                            <span>New York</span>
+                            <span>London</span>
+                            <span>IKEA</span>
+                            <span>NORWAY</span>
+                            <span>DIY</span>
+                            <span>Ideas</span>
+                            <span>Baby</span>
+                            <span>Family</span>
+                            <span>News</span>
+                            <span>Clothing</span>
+                            <span>Shopping</span>
+                            <span>Sports</span>
+                            <span>Games</span>
+                        </section>
                     </section>
                 </footer>
             </div>
