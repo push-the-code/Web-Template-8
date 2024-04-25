@@ -17,7 +17,7 @@
                 color: #000000;
             }
             img {
-                width: 100%;
+                width: 100% !important;
             }
             h1, h2, h3, h4 {
                 font-weight: 500;
@@ -329,19 +329,29 @@
             
             .main > .container > .footer > .blog-posts {
                 color: #ffffff;
+                
             }
             .main > .container > .footer > .blog-posts > .blog-card {
-                width: 32%;
-                display: block;
-            }
-            .main > .container > .footer > .blog-posts > .blog-card > img {
-                float: left;
+                width: 100%;
                 display: inline-block;
-                margin: 0;
+                padding: 0;
             }
-            .main > .container > .footer > .blog-posts > .blog-card > p > span {
-                display: inline;
-                margin: 0 !important;
+            .main > .container > .footer > .blog-posts > .blog-card > .image {
+                width: 25%;
+                float: left;
+            }
+            .main > .container > .footer > .blog-posts > .blog-card > .image > img {
+                width: 100% !important;
+            }
+            .main > .container > .footer > .blog-posts > .blog-card > .description {
+                width: 75%;
+                float: left;
+                margin: 20px 0;
+            }
+            .main > .container > .footer > .blog-posts > .blog-card > .description > span {
+                text-align: start;
+                margin: 8px;
+                padding: 0;
             }
             
             .main > .container > .footer > .popular-tags {
@@ -580,16 +590,26 @@
                     
                     <section class="blog-posts">
                         <h3>BLOG POSTS</h3>
-                        <article class="blog-card">
-                            <img src="https://www.w3schools.com/w3images/workshop.jpg" alt="workshop" />
-                            <p>
+                        <section class="blog-card">
+                            <article class="image">
+                                <img src="https://www.w3schools.com/w3images/workshop.jpg" alt="workshop" />
+                            </article>
+                            <article class="description">
                                 <span>Lorem</span>
+                                <br />
                                 <span>Sed mattis nunc</span>
-                            </p>
-                        </article>
+                            </article>
+                        </section>
                         <article class="blog-card">
-                            <img src="https://www.w3schools.com/w3images/gondol.jpg" alt="gondol" />
-                            <p>Ipsum<br>Praes tinci sed</p>
+                            <article class="image">
+                                <img src="https://www.w3schools.com/w3images/gondol.jpg" alt="gondol" />
+                            </article>
+                            
+                            <article class="description">
+                                <span>Ipsum</span>
+                                <br />
+                                <span>Praes tinci sed</span>
+                            </article>
                         </article>
                     </section>
                     
