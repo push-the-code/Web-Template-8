@@ -30,7 +30,8 @@
             }
             .main {
                 width: 100%;
-                display: inline-block;
+                display: flex;
+                flex-direction: row;
                 margin: 0;
                 padding: 0;
             }
@@ -42,7 +43,6 @@
                 margin: 0 !important;
                 padding: 16px 0 !important;
                 background: #ffffff;
-                border: 1px solid;
             }
             .main > .sidebar > .side-img {
                 width: 100%;
@@ -111,12 +111,13 @@
             .main > .container {
                 float: right;
                 width: 75%;
+                position: fixed;
                 padding: 0 16px;
                 background: #f1f1f1;
-                border: 1px solid;
                 top: 0;
-                left: 0;
+                right: 0;
                 bottom: 0;
+                overflow: scroll;
             }
             .main > .container > .header {
                 padding: 16px 0 !important;
