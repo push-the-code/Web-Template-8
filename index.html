@@ -35,9 +35,13 @@
                 margin: 0;
                 padding: 0;
             }
+            .main > .sidebar-hidden {
+                display: none;
+            }
             .main > .sidebar {
                 float: left;
                 width: 25%;
+                height: 100%;
                 display: block;
                 position: fixed;
                 margin: 0 !important;
@@ -45,7 +49,6 @@
                 background: #ffffff;
             }
             .main > .sidebar > .side-img {
-                width: 100%;
                 padding: 0 16px;
             }
             .main > .sidebar > .side-img > img {
@@ -53,7 +56,6 @@
                 border-radius: 7px;
             }
             .main > .sidebar > .portfolio-name {
-                width: 100%;
                 padding: 28px 16px;
             }
             .main > .sidebar > .portfolio-name > h4 {
@@ -67,7 +69,6 @@
                 text-align: start;
             }
             .main > .sidebar > .portfolio-nav {
-                width: 100%;
                 display: flex;
                 flex-direction: column;
             }
@@ -92,7 +93,6 @@
                 padding: 0;
             }
             .main > .sidebar > .portfolio-socials {
-                width: 100%;
                 padding: 0 16px ;
             }
             .main > .sidebar > .portfolio-socials > p {
@@ -124,6 +124,23 @@
                 margin: 0;
                 color: #000000;
                 background: #f1f1f1;
+                display: flex;
+                flex-direction: column;
+            }
+            .main > .container > .header > .hidden-header {
+                display: none;
+                margin: 0 0 32px 0;
+            }
+            .main > .container > .header > .hidden-header > button {
+                width: fit-content;
+                float: left;
+                font-size: 36px;
+                border: none;
+            }
+            .main > .container > .header > .hidden-header > img {
+                width: 60px;
+                float: right;
+                border-radius: 50px;
             }
             .main > .container > .header > .header-btns {
                 width: 100%;
@@ -426,7 +443,7 @@
                 margin: 32px 0;
             }
             .main > .container > .footer > .blog-posts > .blog-main > .blog-card {
-                height: 60px;
+                height: 65px;
                 display: flex;
                 justify-content: center;
                 padding: 8px 16px;
@@ -496,10 +513,169 @@
             .main > .container > .last-footer > p > span {
                 display: inline-block;
             }
+            @media screen and (max-width: 770px) {
+                .main > .sidebar {
+                    display: none;
+                    width: 0;
+                }
+                .main > .container {
+                    width: 100%;
+                    float: none;
+                    position: relative;
+                }
+                .main > .container > .header > .hidden-header {
+                    display: block;
+                }
+                .main > .sidebar-hidden {
+                    float: left;
+                    height: 100%;
+                    position: fixed;
+                    z-index: 3;
+                    margin: 0 !important;
+                    padding: 16px 0 !important;
+                    background: #ffffff;
+                }
+                .main > .sidebar-hidden > .side-img {
+                    padding: 0 16px;
+                }
+                .main > .sidebar-hidden > .side-img > img {
+                    width: 40%;
+                    border-radius: 7px;
+                }
+                .main > .sidebar-hidden > .side-img > button {
+                    width: fit-content;
+                    font-size: 36px;
+                    float: right;
+                    padding: 0;
+                    background: none;
+                    border: none;
+                }
+                .main > .sidebar-hidden > .portfolio-name {
+                    padding: 28px 16px;
+                }
+                .main > .sidebar-hidden > .portfolio-name > h4 {
+                    font-size: 22px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+                .main > .sidebar-hidden > .portfolio-name > p {
+                    background: none;
+                    color: #919191;
+                    text-align: start;
+                }
+                .main > .sidebar-hidden > .portfolio-nav {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .main > .sidebar-hidden > .portfolio-nav > a {
+                    width: 100%;
+                    padding: 12px 0 !important;
+                    margin: 0;
+                }
+                .main > .sidebar-hidden > .portfolio-nav > a:hover {
+                    background: darkgrey;
+                }
+                .main > .sidebar-hidden > .portfolio-nav > a:first-child {
+                    color: #009688;
+                }
+                .main > .sidebar-hidden > .portfolio-nav > a > i {
+                    margin: 0 0 0 16px;
+                }
+                .main > .sidebar-hidden > .portfolio-nav > a > span {
+                    display: inline-block;
+                    text-transform: uppercase;
+                    margin: 0 8px !important;
+                    padding: 0;
+                }
+                .main > .sidebar-hidden > .portfolio-socials {
+                    padding: 0 16px ;
+                }
+                .main > .sidebar-hidden > .portfolio-socials > p {
+                    background: none;
+                }
+                .main > .sidebar-hidden > .portfolio-socials > p > a {
+                    display: inline-block;
+                    font-size: 18px;
+                    margin: 0 1px;
+                }
+                .main > .sidebar-hidden > .portfolio-socials > p > a:hover {
+                    color: rgba(0, 0, 0, 0.61);
+                    cursor: default;
+                }
+            }
+            @media screen and (max-width: 427px) {
+                .main > .container > .header > .header-btns > p > a:nth-child(4) {
+                    display: ;
+                }
+                .main > .container > .photos {
+                    display: grid;
+                    grid-gap: 16px 14px;
+                    grid-template-columns: repeat(1, 1fr);
+                }
+                .main > .container > .about > .about-img {
+                    display: grid;
+                    grid-gap: 0;
+                    grid-template-columns: repeat(1, 1fr);
+                }
+                .main > .container > .pricing > .prices {
+                    display: grid;
+                    grid-gap: 16px 14px;
+                    grid-template-columns: repeat(1, 1fr);
+                }
+                .main > .container > .contact > .contact-detail {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .main > .container > .contact > .contact-detail > p {
+                    margin: 0 !important;
+                }
+                .main > .container > .footer {
+                    display: grid;
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
         </style>
     </head>
     <body>
         <div class="main">
+            
+            <aside class="sidebar-hidden">
+                <section class="side-img">
+                    <img src="https://www.w3schools.com/w3images/avatar_g2.jpg" alt="avatar_g2" />
+                    <button type="button" class="sidebar-close" onclick="close_sidebar()"><i class="fa-solid fa-xmark"></i></button>
+                </section>
+                
+                <section class="portfolio-name">
+                    <h4>Portfolio</h4>
+                    <p>Template by Pushkar</p>
+                </section>
+                
+                <section class="portfolio-nav">
+                    <a href="#header">
+                        <i class="fas fa-th-large"></i>
+                        <span>Portfolio</span>
+                    </a>
+                    <a href="#about-img">
+                        <i class="far fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    <a href="#contact">
+                        <i class="far fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </section>
+                
+                <section class="portfolio-socials">
+                    <p>
+                        <a href="https://www.facebook.com/w3schoolscom/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/w3schools.com_official/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="https://web.snapchat.com/" target="_blank"><i class="fa-brands fa-square-snapchat"></i></a>
+                        <a href="https://www.pinterest.com/" target="_blank"><i class="fa-brands fa-square-pinterest"></i></a>
+                        <a href="https://x.com/W3Schoolscom/" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/w3schools-com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    </p>
+                </section>
+            </aside>
             
             <aside class="sidebar">
                 <section class="side-img">
@@ -508,7 +684,7 @@
                 
                 <section class="portfolio-name">
                     <h4>Portfolio</h4>
-                    <p>Template created by Pushkar</p>
+                    <p>Template by Pushkar</p>
                 </section>
                 
                 <section class="portfolio-nav">
@@ -540,6 +716,10 @@
             
             <div class="container">
                 <header class="header" id="header">
+                    <section class="hidden-header">
+                        <button type="button" class="sidebar-open" onclick="open_sidebar()"><i class="fa-solid fa-bars"></i></button>
+                        <img src="https://www.w3schools.com/w3images/avatar_g2.jpg" alt="avatar_g2" />
+                    </section>
                     <h1>My Portfolio</h1>
                     <section class="header-btns">
                         <p>
@@ -798,5 +978,25 @@
                 </section>
             </div>
         </div>
+        <script type="text/javascript" charset="utf-8">
+            const menu = document.querySelector('.sidebar-hidden');
+            const button_open = document.querySelector('.sidebar-open');
+            const button_close = document.querySelector('.sidebar-close');
+            console.log(menu);
+            function open_sidebar() {
+                if (menu.style.display == 'block') {
+                    menu.style.display = 'none';
+                } else {
+                    menu.style.display = 'block';
+                }
+            }
+            function close_sidebar() {
+                if (menu.style.display == 'none') {
+                    menu.style.display = 'block';
+                } else {
+                    menu.style.display = 'none';
+                }
+            }
+        </script>
     </body>
 </html>
